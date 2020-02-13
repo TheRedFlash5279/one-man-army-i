@@ -1,0 +1,723 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="|iMG%-Cg22WHw%m4v?B^">MC</variable><variable id="a!q4_Q#9UoLVV{DiUDh:">Walker</variable><variable id="qS2~FED6lcdlj]tgM1,D">Drone</variable><variable id="Tf@h*DrT_:7$M{}0QkeP">Brute</variable><variable id="9F?)Mo%iQSZ2f8Qmsdk[">mySprite</variable><variable id="qU@wodP5=MTdl%,%0$$J">Seeker</variable><variable id="8wBQ0nNBB@P,Y?EdDi?U">myEnemy</variable><variable id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</variable><variable id="[VnH88hPxLD`I9XjdEng">projectile</variable><variable type="KIND_SpriteKind" id="(z6-YcZ!^M.r,hELlr}I">Player</variable><variable type="KIND_SpriteKind" id="@Qn87-BZPFyA+BP,qr,`">Projectile</variable><variable type="KIND_SpriteKind" id="l,DAX~-%j|Dc#8`0.*HD">Food</variable><variable type="KIND_SpriteKind" id="^NE%cw|mh(r$/IT.{X@K">Enemy</variable><variable type="KIND_SpriteKind" id="63Q93MCKly~3m/Vn=HMT">Enemy2</variable><variable type="KIND_SpriteKind" id="C_nPD8OaFQv6P0QsYS#E">Enemy3</variable><variable type="KIND_SpriteKind" id="}M3Ve|_~-)@hWYSIahT8">Enemy4</variable><variable type="KIND_SpriteKind" id="JK!|/jdq.i{H_w1inuOM">Enemy5</variable></variables><block type="pxt-on-start" id="9H0m}YQ41JoyiMJ3at_[" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="M+t7B=X+c78P-eLZz-a$"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="iokOS/?*89i8;t|8pfJ#"><value name="img"><shadow type="screen_image_picker" id="^4L03C2JgK=1|GZz)|+P"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . f f f f f f f . . . . . 
+. . . f 1 1 1 1 1 1 1 f . . . . 
+. . f 1 1 1 1 1 1 1 1 1 f . . . 
+. . f 1 f 1 1 1 1 f f 1 f . . . 
+. f f 1 1 f 1 1 1 f f 1 f . . . 
+f 1 f 1 1 1 1 1 1 1 1 1 f . d b 
+f d f 1 1 1 1 1 1 2 1 1 f d b b 
+f d f 1 2 1 2 1 1 1 1 8 8 d b . 
+f f f 2 2 2 2 1 2 1 2 2 5 8 . . 
+. . . f 2 2 2 2 2 2 2 8 . 8 . . 
+. . . . f f f f f f f . . . . . 
+. . . . . 6 6 . 6 6 . . . . . . 
+. . . . . e e . e e . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="0U.pZ`7XY8k1~(K,Z6oO"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="XkpTt[NLA)Pfp_|pAbIX"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="ua1ZBiT+VypyY6kGafWU"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><next><block type="variables_set" id=",]XkHUWq$s?w$}wo_OKS"><field name="VAR" id="a!q4_Q#9UoLVV{DiUDh:">Walker</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="W,*zX-ax!3(`1_:vz][]"><value name="img"><shadow type="screen_image_picker" id="*IC6q/fZloq,ivkijnFy"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . f f f f f . . . . . . 
+. . . . f b b b b b f . . . . . 
+. . . . f b b f b b f . . . . . 
+. . . . f b f 6 f b f . . . . . 
+. . . . f b b b b b f . . . . . 
+. . . . f b 2 f f b f . . . . . 
+. . . . . f f f f f . . . . . . 
+. . . . f . . . . . f . . . . . 
+. . . f . . . . . . . f . . . . 
+. . . f . . . . . . . f . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="6!3R.Et^)fMT_:p{lUkr"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="5QKG$|}7e6aivB8rI}Z{"><field name="VAR" id="qU@wodP5=MTdl%,%0$$J">Seeker</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="$:gHR9tFQK;c)fmDJn|W"><value name="img"><shadow type="screen_image_picker" id="]DvnDzo![.:R3xr-AnDh"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f . . . . . . . 
+. . . . . f c 1 c f . . . . . . 
+. . . . f 1 c c c 2 f . . . . . 
+f . . f c c f f f c c f . . f . 
+f f . f 2 c f 6 f c 1 f . f f . 
+f b f . f c c c c c f . f b f . 
+f b b f . f 1 c 2 f . f b b f . 
+. f b b f f f f f f f b b f . . 
+. . f b b f a a a f b b f . . . 
+. . . f f a a a a a f f . . . . 
+. f . f a a a a a a a f . . . . 
+. f f f a f a a a f a 2 . . . . 
+. f b f a f a a a 2 a f . . . . 
+. . f f 2 f f f f f 2 f . . . . 
+. . . 2 f 2 . . . f f f . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="6jYicVc_;wUwE-Aml)OC"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="0{{58=u|JWq:KV1hwtA_"><field name="VAR" id="qS2~FED6lcdlj]tgM1,D">Drone</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="{^bWrTrY}0+@@sus+ASZ"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . f . . . . . . . . 
+. . . . . . f 2 f . . . . . . . 
+. . . . . f c c c f . . . . . . 
+. . . . f 1 c c c 1 f . . . . . 
+. . . f c c f f f c c f . . . . 
+. . . f 2 c f 6 f c 2 f . . . . 
+. . . . f c c c c 1 f . . . . . 
+. . . . . f 1 c c f . f f f f . 
+. . d f f f f 2 f f f f f f f . 
+d . f d e e e f e e e f f f . . 
+f d e e f e e e e f e e e f . . 
+f e d f . f e e e f f e e f f . 
+d f d e 2 . f f f . . 2 e e f . 
+d f 2 e f f e . e f f e e 2 f . 
+. f f e 2 f . . . f e 2 f f . . 
+. . f 2 e f . . . 2 2 e f . . . 
+. . f f f f . . . f 2 f 2 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow><block type="screen_image_picker" id=".GeXa{.5CEt/K7U$Aird"><field name="img">img`
+. . f . . . . f . . . . f . . . 
+. . f . . . f . . . . f . . . . 
+. . . f f f f f f f f f . . . . 
+f . . f c c c c c c c f . . . . 
+. f f c c c c c c c c c f f . . 
+. . f c c c f f f c c c f . f . 
+. . f c c c f 6 f c c c f . . . 
+f f f c c c 2 2 2 c c c f . f . 
+. . f c c c c e 2 c c c f f . . 
+. . f c e f f e f 2 c c f . . . 
+. f f c f e b e b f e c f . . . 
+f . . f c f e f b e f f f . . . 
+. . . . f f f f f f f . . f . . 
+. . . . . f . . . f . . . . f . 
+. . . . f . . . . f . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block></value><value name="kind"><shadow type="spritekind" id="T^3(Mh^$xUf_%JL+*0,t"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="83bsRfzgdNN`BZfzB^Ub"><field name="VAR" id="Tf@h*DrT_:7$M{}0QkeP">Brute</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="1vn)a$)P15:/_ky5/Ef^"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow><block type="screen_image_picker" id="ux$u3.la/fU|J]pPzy!a"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . f . . . . . . . . 
+. . . . . . f 2 f . . . . . . . 
+. . . . . f c c c f . . . . . . 
+. . . . f 1 c c c 1 f . . . . . 
+. . . f c c f f f c c f . . . . 
+. . . f 2 c f 6 f c 2 f . . . . 
+. . . . f c c c c 1 f . . . . . 
+. . . . . f 1 c c f . f f f f . 
+. . d f f f f 2 f f f f f f f . 
+d . f d e e e f e e e f f f . . 
+f d e e f e e e e f e e e f . . 
+f e d f . f e e e f f e e f f . 
+d f d e 2 . f f f . . 2 e e f . 
+d f 2 e f f e . e f f e e 2 f . 
+. f f e 2 f . . . f e 2 f f . . 
+. . f 2 e f . . . 2 2 e f . . . 
+. . f f f f . . . f 2 f 2 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block></value><value name="kind"><shadow type="spritekind" id="A`qf),PTw+XB/8*~wl:T"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="qJ}U#Jmn=5iG%h~|Im7/"><field name="VAR" id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="W9@_;@48W-]`a:3JTc_E"><value name="img"><shadow type="screen_image_picker" id="AC6+G(jcij~zw~q{S@Ru"><field name="img">img`
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . f f f f f f . . . . . . . . . 
+. . . . . . . . . f c c c c c c f . . . . . . . . 
+. . . . . . . . . f c c c c c c f . . . . . . . . 
+. . . . . . . . . f c f f f f c f . . . . . . . . 
+. . . . . . . . . f c c c c c c f . . . . . . . . 
+. . . . . . . . . f c c c c c c f . . . . . . . . 
+. . . . . . . . . f c c c c c c f . . . . . . . . 
+. . . . . . . . . f f c c c c f f . . . . . . . . 
+. . . . . . . . . . f f f f f f . . . . . . . . . 
+. . . . . . . . . . . f c c f . . . . . . . . . . 
+. . . . . . . . f f f c c c c f f f . . . . . . . 
+. . . . . . . f c c c c c c c c c c f . . . . . . 
+. . . . . . f c c c c c c c c c c c c f . . . . . 
+. . . . . f f c c f c c c c c c f c c f f . . . . 
+. . . . . f c c f f c c c c c c f f c c f . . . . 
+. . . . . f c c f f c c c c c c f f c c f . . . . 
+. . . . f f c c f f c c c c c c f f c c f . . . . 
+. . . f b f 2 c 2 f c c c c c c f 2 c c 2 . . . . 
+. . f b b f c 2 f f c c c c c c f f 2 c f . . . . 
+. f b b f 2 c c f f c c c c c c f f c 2 f . . . . 
+. f b f . f 2 2 f f c c c c c c f f 2 c f . . . . 
+. f b f . f f 2 f f c c c c c c f 2 f 2 f . . . . 
+. f b b f . . . . f c c c c c c f . . . . . . . . 
+. . f b f . . . . f c c f f c c f . . . . . . . . 
+. . . f b f . . . f c c f f c c f . . . . . . . . 
+. . . . f f . . . f c c f f c c f . . . . . . . . 
+. . . . . f . . . f c c f f c c f . . . . . . . . 
+. . . . . . . . . f c c f f c c f . . . . . . . . 
+. . . . . . . . . f c c f f c c f . . . . . . . . 
+. . . . . . . . . f c c f f c c f . . . . . . . . 
+. . . . . . . . . f f f f f f f f . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id=",QxXB0Tbham3P5ISI+l?"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="spritesetsetflag" id="#=%SPT9{Gu_vq~Y!%S.`"><field name="flag">SpriteFlag.StayInScreen</field><value name="sprite"><block type="variables_get" id="x~w7MlEk8#JUUmUeo7bx"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><value name="on"><shadow type="toggleOnOff" id="M8Kbs1myhy8M5+n2}-rn"><field name="on">true</field></shadow></value><next><block type="spritesetpos" id="}hZpuGE|ll3;sg}ScmN{"><value name="sprite"><block type="variables_get" id="$EB+MnkDWsR5R#:mizre"><field name="VAR" id="Tf@h*DrT_:7$M{}0QkeP">Brute</field></block></value><value name="x"><shadow type="positionPicker" id="}fOUx-H66T(*wGm,}NT9"><field name="index">162</field></shadow></value><value name="y"><shadow type="positionPicker" id="}u|bKDFEumWW%kxMMj4~"><field name="index">58</field></shadow></value><next><block type="spritesetpos" id="QN`m.pRo?#-b$o+lu.A;"><value name="sprite"><block type="variables_get" id="0Z#AZ}{dIrp,P1xJ].^}"><field name="VAR" id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</field></block></value><value name="x"><shadow type="positionPicker" id=";XCR|/J^/{duL4Q+W1`K"><field name="index">160</field></shadow></value><value name="y"><shadow type="positionPicker" id="WAZLMfWc$BDy%}`hT!Oq"><field name="index">58</field></shadow></value><next><block type="spritesetpos" id="Eb.5w|ojRPCB`,`(/goc"><value name="sprite"><block type="variables_get" id="QYZ7ZEn1nD{Cnlq]29gn"><field name="VAR" id="qS2~FED6lcdlj]tgM1,D">Drone</field></block></value><value name="x"><shadow type="positionPicker" id="/JSYcl+zorh#Mix?6X.("><field name="index">164</field></shadow></value><value name="y"><shadow type="positionPicker" id="?1Tw6$F_X(rYrRQD=Z`t"><field name="index">65</field></shadow></value><next><block type="spritesetpos" id="H*sz+U.IWk0XFytI[U{/"><value name="sprite"><block type="variables_get" id="B1TEQsKs;dCCtd4B;+t)"><field name="VAR" id="a!q4_Q#9UoLVV{DiUDh:">Walker</field></block></value><value name="x"><shadow type="positionPicker" id="$mk)N31Z:`L?/c$^l2Na"><field name="index">166</field></shadow></value><value name="y"><shadow type="positionPicker" id="]bd38u#|bw,o]bP?*+7}"><field name="index">61</field></shadow></value><next><block type="spritesetpos" id="Eku7@~Ap6u#?a{,[-?Y/"><value name="sprite"><block type="variables_get" id="!IN66K[$U4|N:o{Wc@lZ"><field name="VAR" id="qU@wodP5=MTdl%,%0$$J">Seeker</field></block></value><value name="x"><shadow type="positionPicker" id="Ccd$.b=|dfK`[0ho{00^"><field name="index">164</field></shadow></value><value name="y"><shadow type="positionPicker" id="9w%sUfoFPlL4eK6x4=$Z"><field name="index">63</field></shadow></value><next><block type="gamesetbackgroundimage" id="$?a4G0.M|dWT:WG8pk[_"><value name="img"><shadow type="background_image_picker" id="NovASz:GwY!ei:t,J,#e"><field name="img">img`
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b b d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d b b d d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d b b d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
+`</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="gameinterval" id="b1QD@:]48CGH/;k38Q^d" x="610" y="10"><value name="period"><shadow type="timePicker" id="|%XUa$iF_Bmk2HTUPNj2"><field name="ms">750</field></shadow></value><statement name="HANDLER"><block type="variables_set" id=":.vreo[3tDMg*YNFq-r("><field name="VAR" id="a!q4_Q#9UoLVV{DiUDh:">Walker</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="/kAS!QvUrU)l`uM}Ang5"><value name="img"><shadow type="screen_image_picker" id="2f@vSoG0%4r`jcPAFG@J"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . f f f f f . . . . . . 
+. . . . f b b b b b f . . . . . 
+. . . . f b b f b b f . . . . . 
+. . . . f b f 6 f b f . . . . . 
+. . . . f b b b b b f . . . . . 
+. . . . f b 2 f f b f . . . . . 
+. . . . . f f f f f . . . . . . 
+. . . . f . . . . . f . . . . . 
+. . . f . . . . . . . f . . . . 
+. . . f . . . . . . . f . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="brtn$UONB7TAhul1{5Ij"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="spritesetpos" id="DYQM3eYHb:y|Uky7eT0["><value name="sprite"><block type="variables_get" id="I5OnQnj]qz10)O^bfd[u"><field name="VAR" id="a!q4_Q#9UoLVV{DiUDh:">Walker</field></block></value><value name="x"><shadow type="positionPicker" id="I-pK`!DGjatWP6T.Hf1u"><field name="index">160</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random" id="g)7?z:8V9otZgH2?=RIV"><value name="min"><shadow type="math_number" id="BtBHt8;Yrr$ORdSv2UrA"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="aFXn6Uely-5tvr{1$w!|"><field name="NUM">100</field></shadow></value></block></value><next><block type="spritesetvel" id="T^F@JRD`eZs4I/2}Sc!w"><value name="sprite"><block type="variables_get" id="2409bEH82dboTjQpKiK="><field name="VAR" id="a!q4_Q#9UoLVV{DiUDh:">Walker</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="17Xq=P/B+IRd1KKIY#Q@"><field name="speed">-40</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow><block type="device_random" id="K=Ca=[HC]2ZDZc]``Ho9"><value name="min"><shadow type="math_number" id="l/15h/Z|ux#73[9Xa.p9"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="NY2p4n,ex,gj89avDA4*"><field name="NUM">10</field></shadow></value></block></value><next><block type="spriteFollowOtherSprite" id="UKPETsOEzU!(Wm}OGIWI"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="@4@*j+DI7y=*1s({9wCZ"><field name="VAR" id="a!q4_Q#9UoLVV{DiUDh:">Walker</field></block></value><value name="target"><block type="variables_get" id="R06vM9]v6aecI-!5VqJl"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><value name="speed"><shadow type="math_number" id="id=:80f{u*Xe5[2.YaA("><field name="NUM">45</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="keyonevent" id="/wm0zi?{/WJ0CjK+]8|f" x="1270" y="30"><field name="button">controller.A</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="variables_set" id="?}b/H-]Y7QQ*RF0x1(QC"><field name="VAR" id="[VnH88hPxLD`I9XjdEng">projectile</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="OYr%NJ!~Yf@gV}m^05}R"><value name="img"><shadow type="screen_image_picker" id="T%X/?@mSoWp+6qhB?@0O"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . f . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="sprite"><block type="variables_get" id="mln1Nl-MCWEmE?APR_3q"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="+xwYKyAx}q!FP*blG_e_"><field name="speed">50</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="lby`9/}:vCY1=vyAu+-D"><field name="speed">0</field></shadow></value></block></value><next><block type="run_image_animation" id="mbs(D9?I*:O?z@w4_R@@"><value name="sprite"><block type="variables_get" id="bNp!|jk?(|3q6hrKbnnF"><field name="VAR" id="[VnH88hPxLD`I9XjdEng">projectile</field></block></value><value name="frames"><block type="animation_editor" id="jLG*-H]A#VM#-h7Bo#y?"><field name="frames">[img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . 6 6 6 6 6 6 6 . . . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 6 6 6 6 . . . . . 
+. . . . . . 8 8 6 6 6 6 . . . . 
+. . . . . . . 8 6 6 6 6 6 . . . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . 6 6 6 . . . . . . . . . . . 
+. . 8 8 6 6 6 6 6 6 . . . . . . 
+. . . . 8 8 8 6 6 6 6 6 6 6 . . 
+. . . . . . 8 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. 6 6 6 6 6 6 6 6 6 8 8 . . . . 
+6 6 6 6 6 6 6 6 6 6 6 8 8 8 . . 
+. . 8 8 6 6 6 6 6 6 6 6 6 8 . . 
+. . . . 8 8 8 6 6 6 6 6 6 6 8 . 
+. . . . . . 8 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. 8 8 8 8 8 8 8 8 8 8 8 . . . . 
+. 6 6 6 6 6 6 6 6 6 6 8 8 8 . . 
+. . 8 8 6 6 6 6 6 6 6 6 6 8 . . 
+. . . . 8 8 8 6 6 6 6 6 6 6 8 . 
+. . . . . . 8 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. 8 8 8 8 8 8 8 8 8 8 8 . . . . 
+8 8 8 8 8 8 8 6 6 6 6 8 8 8 . . 
+. . 8 8 6 6 8 8 8 8 6 6 6 8 . . 
+. . . . 8 8 8 6 8 8 8 6 6 6 8 . 
+. . . . . . 8 8 6 6 8 8 6 6 8 . 
+. . . . . . . 8 6 6 8 8 6 6 8 . 
+. . . . . . . 8 6 6 6 8 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. 8 8 8 8 8 8 8 8 8 8 8 . . . . 
+. 6 6 6 6 6 6 6 6 6 6 8 8 8 . . 
+. . 8 8 6 6 6 6 6 6 6 6 6 8 . . 
+. . . . 8 8 8 6 6 6 6 6 6 6 8 . 
+. . . . . . 8 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. 8 8 8 8 8 8 8 8 8 8 8 . . . . 
+6 6 6 6 6 6 6 6 6 6 6 8 8 8 . . 
+. . 8 8 6 6 6 6 6 6 6 6 6 8 . . 
+. . . . 8 8 8 6 6 6 6 6 6 6 8 . 
+. . . . . . 8 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+8 8 8 8 8 8 8 8 . . . . . . . . 
+. 6 6 6 6 6 6 8 8 8 8 . . . . . 
+. . 8 8 6 6 6 6 6 6 8 8 8 . . . 
+. . . . 8 8 8 6 6 6 6 6 8 8 . . 
+. . . . . . 8 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 6 8 . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 6 6 . . . . . . . 
+. . . . . . 8 8 6 6 6 . . . . . 
+. . . . . . . 8 6 6 6 6 6 . . . 
+. . . . . . . 8 6 6 6 6 6 8 . . 
+. . . . . 8 8 6 6 6 6 6 8 8 . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 8 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . 6 6 6 6 6 . . . . 
+. . . . 8 8 6 6 6 6 6 8 . . . . 
+. . . 8 6 6 6 6 6 6 8 8 . . . . 
+. 8 8 8 6 6 6 6 6 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`]</field></block></value><value name="frameInterval"><shadow type="timePicker" id="q(90Brce`xFXU^bNA))V"><field name="ms">50</field></shadow></value><value name="loop"><shadow type="toggleOnOff" id=")Pxs4/f7jji4-y9NS$TC"><field name="on">false</field></shadow></value><next><block type="device_pause" id="ep]Z~oM|c(.UGisu./Rc"><value name="pause"><shadow type="timePicker" id="`u(aBH=1#KJ`MOj[_|DT"><field name="ms">500</field></shadow></value><next><block type="spritedestroy" id="H]K4v-LbW1?:N#(j-Vlz"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="DOn$E$ydU,uVI?:w^s}#"><field name="VAR" id="[VnH88hPxLD`I9XjdEng">projectile</field></block></value></block></next></block></next></block></next></block></statement></block><block type="gameinterval" id="8!Hz(]!owyUdsiaiAonM" x="610" y="330"><value name="period"><shadow type="timePicker" id="kknrf6a:o1i)(*e9GwB."><field name="ms">1200</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="8rg#,HP6Zv}MAX67iii^"><field name="VAR" id="qU@wodP5=MTdl%,%0$$J">Seeker</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="iGv1`,:1^eh~$5=[gs!Z"><value name="img"><shadow type="screen_image_picker" id="{dN=,heA{aAY95W@ghm}"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f . . . . . . . 
+. . . . . f c 1 c f . . . . . . 
+. . . . f 1 c c c 2 f . . . . . 
+f . . f c c f f f c c f . . f . 
+f f . f 2 c f 6 f c 1 f . f f . 
+f b f . f c c c c c f . f b f . 
+f b b f . f 1 c 2 f . f b b f . 
+. f b b f f f f f f f b b f . . 
+. . f b b f a a a f b b f . . . 
+. . . f f a a a a a f f . . . . 
+. f . f a a a a a a a f . . . . 
+. f f f a f a a a f a 2 . . . . 
+. f b f a f a a a 2 a f . . . . 
+. . f f 2 f f f f f 2 f . . . . 
+. . . 2 f 2 . . . f f f . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="SamQ9NGe*VI(D2L@)h}e"><field name="MEMBER">Enemy2</field></shadow></value></block></value><next><block type="spritesetpos" id="9!t?g9WeW|i4sG_Z#4mV"><value name="sprite"><block type="variables_get" id="Y/M~8#wQ2{U_{8[Za*lz"><field name="VAR" id="qU@wodP5=MTdl%,%0$$J">Seeker</field></block></value><value name="x"><shadow type="positionPicker" id="_J|,#zn2!XD:CrhB*f8*"><field name="index">163</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random" id="n4dO1ONflJ0D.0{4dDc+"><value name="min"><shadow type="math_number" id="D^a_U0)H+6KGzVIP,e73"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="Ph6:~HmZ*M1i##~_|/vO"><field name="NUM">100</field></shadow></value></block></value><next><block type="spritesetvel" id="~;|tsTJQRy%9xoa7@bqm"><value name="sprite"><block type="variables_get" id="yoS2C8tZV7#AImYz/[9Q"><field name="VAR" id="qU@wodP5=MTdl%,%0$$J">Seeker</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="lb[h~9Op:~gS07iFUZMs"><field name="speed">-40</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow><block type="device_random" id="1aD+VGVf5.o]05C={,#T"><value name="min"><shadow type="math_number" id="aE:wU2=|`LK!*uvmL4fx"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="v6n%nRGrq(}[x_r=@}6@"><field name="NUM">10</field></shadow></value></block></value><next><block type="spriteFollowOtherSprite" id="oTZ#Le~K~m2akRJ-1zPq"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="Cn6A~xIoY*fGU?0G]ai="><field name="VAR" id="qU@wodP5=MTdl%,%0$$J">Seeker</field></block></value><value name="target"><block type="variables_get" id="5f,Sa5aK0t,Y+/2);Q,l"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><value name="speed"><shadow type="math_number" id="%0L4ZS^M;GeN@I~xj[C$"><field name="NUM">55</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" id="gZeZ|I8L/@2*5`bFA^^e" x="1270" y="510"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="J{YOL/4*k+clyNrr.f^u"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="ylsDD4I;)NL9]dclH#B."><field name="MEMBER">Enemy2</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id="=R0%Ge-0=a1@joM#e*Sq"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="Yo3S%Ug7vjD;|;$@+@~P"><field name="MEMBER">Projectile</field></shadow></value><statement name="HANDLER"><block type="spritedestroy" id="z[~[kj$*t-]yV3Yu)l-/"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><field name="effect">effects.spray</field><value name="sprite"><block type="variables_get" id="Z~F;_Nvme!8Q8W8-0/xG"><field name="VAR" id="qU@wodP5=MTdl%,%0$$J">Seeker</field></block></value><value name="duration"><shadow type="timePicker" id="avn#~pZ+J6Ql922L}hI2"><field name="ms">500</field></shadow></value></block></statement></block><block type="gameinterval" id="fo3w{UIgDfdP{M91Em_P" x="610" y="650"><value name="period"><shadow type="timePicker" id="-3`zfM~/XrQLS6M*?cV|"><field name="ms">1450</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="F`mZ,3=@k(|^Eb@(?Z6w"><field name="VAR" id="Tf@h*DrT_:7$M{}0QkeP">Brute</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="`*3HE7E)eWM%QC#@x?eS"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow><block type="screen_image_picker" id="-%mAkdy:(1i9HFV[+?M7"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . f . . . . . . . . 
+. . . . . . f 2 f . . . . . . . 
+. . . . . f c c c f . . . . . . 
+. . . . f 1 c c c 1 f . . . . . 
+. . . f c c f f f c c f . . . . 
+. . . f 2 c f 6 f c 2 f . . . . 
+. . . . f c c c c 1 f . . . . . 
+. . . . . f 1 c c f . f f f f . 
+. . d f f f f 2 f f f f f f f . 
+d . f d e e e f e e e f f f . . 
+f d e e f e e e e f e e e f . . 
+f e d f . f e e e f f e e f f . 
+d f d e 2 . f f f . . 2 e e f . 
+d f 2 e f f e . e f f e e 2 f . 
+. f f e 2 f . . . f e 2 f f . . 
+. . f 2 e f . . . 2 2 e f . . . 
+. . f f f f . . . f 2 f 2 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block></value><value name="kind"><shadow type="spritekind" id="7Cy1XlrM;)tb5pf4[9io"><field name="MEMBER">Enemy3</field></shadow></value></block></value><next><block type="spritesetpos" id="V5Nme`w*OgVo!I;q`:iv"><value name="sprite"><block type="variables_get" id="Om(*8r_W,KZ,PsTCMF,b"><field name="VAR" id="Tf@h*DrT_:7$M{}0QkeP">Brute</field></block></value><value name="x"><shadow type="positionPicker" id="zW#xu*MTI;[Qx~BxF7!o"><field name="index">163</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random" id="b3Lo2~zL~sT0L*y2Y3)L"><value name="min"><shadow type="math_number" id="h(xFT?{[dzw+3$MlbF38"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="bATrU]Ge:NRMzGzommj{"><field name="NUM">100</field></shadow></value></block></value><next><block type="spritesetvel" id="6T~mxjMAn,My2z{JHg8("><value name="sprite"><block type="variables_get" id="z3Ue?E_/AEGaNbgW1r;m"><field name="VAR" id="Tf@h*DrT_:7$M{}0QkeP">Brute</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id=":_(]HTWXoFJ,(m:Sy/_2"><field name="speed">-40</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow><block type="device_random" id="cP1fcNi]!es59G3EK7Ha"><value name="min"><shadow type="math_number" id="wVD4UO6vTM@NLTD`H]L0"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="6fX%Nl%zE7B$E:pN)d;V"><field name="NUM">10</field></shadow></value></block></value><next><block type="spriteFollowOtherSprite" id="]-yeI4$B5hb[ixl[EmZv"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="HV,8VI/Ev-xZRx=xDwV{"><field name="VAR" id="Tf@h*DrT_:7$M{}0QkeP">Brute</field></block></value><value name="target"><block type="variables_get" id="LdkBxgRXBGo|n1Bg/vxb"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><value name="speed"><shadow type="math_number" id="hFdZHQRS~]p;0-?h$TOU"><field name="NUM">25</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" id="c,j:Sq31DB|M]eOXYyNL" x="1270" y="650"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="Hpv-`HeXKt:zxh_P4+;:"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="=)i{Tyrr(-8aVHT=#6!S"><field name="MEMBER">Enemy</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id=":}Cxp0D(GG.gOl@D%g.J"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="y^}+0Usz7it}3i7h)+3B"><field name="MEMBER">Projectile</field></shadow></value><statement name="HANDLER"><block type="spritedestroy" id="@Nk5`!1/2LPJ=YVJ7Qr^"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><field name="effect">effects.spray</field><value name="sprite"><block type="variables_get" id="RZ;?WpJs8([dWG|i)w:-"><field name="VAR" id="a!q4_Q#9UoLVV{DiUDh:">Walker</field></block></value><value name="duration"><shadow type="timePicker" id="Qblx0,@*]Bbe(i9Okj:."><field name="ms">500</field></shadow></value></block></statement></block><block type="spritesoverlap" id="0(i:ak+j-m0d1):-DIFV" x="1270" y="790"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="dfeZ5(z@|~4fm!Ojj5sX"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="Ts|svSGz1Ks(s*/p[`nr"><field name="MEMBER">Enemy3</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id="ahY@Du2IgQ0r8*}8Tzg("><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="(FLDJ1wvM#7Xad*2hpf1"><field name="MEMBER">Projectile</field></shadow></value><statement name="HANDLER"><block type="spritedestroy" id="biXv[FF_BAr#^/B~R3p_"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><field name="effect">effects.spray</field><value name="sprite"><block type="variables_get" id="-2?XsKw`W#h1zUjsL2q+"><field name="VAR" id="Tf@h*DrT_:7$M{}0QkeP">Brute</field></block></value><value name="duration"><shadow type="timePicker" id="Lu-m36DUL~nR48E$RRyl"><field name="ms">500</field></shadow></value></block></statement></block><block type="gameinterval" id="zcmp$;cPG~9lT_]w=`2]" x="610" y="950"><value name="period"><shadow type="timePicker" id="2Tbt6m]mb`^6y0xN9i~T"><field name="ms">1450</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="*Yvl|-iw+Qq@=jgBtSVc"><field name="VAR" id="qS2~FED6lcdlj]tgM1,D">Drone</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="5Z[LoQ$Bx!M%F1d{+k}W"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . f . . . . . . . . 
+. . . . . . f 2 f . . . . . . . 
+. . . . . f c c c f . . . . . . 
+. . . . f 1 c c c 1 f . . . . . 
+. . . f c c f f f c c f . . . . 
+. . . f 2 c f 6 f c 2 f . . . . 
+. . . . f c c c c 1 f . . . . . 
+. . . . . f 1 c c f . f f f f . 
+. . d f f f f 2 f f f f f f f . 
+d . f d e e e f e e e f f f . . 
+f d e e f e e e e f e e e f . . 
+f e d f . f e e e f f e e f f . 
+d f d e 2 . f f f . . 2 e e f . 
+d f 2 e f f e . e f f e e 2 f . 
+. f f e 2 f . . . f e 2 f f . . 
+. . f 2 e f . . . 2 2 e f . . . 
+. . f f f f . . . f 2 f 2 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow><block type="screen_image_picker" id="4RKI.$OMG=Tj6ZPyc6QC"><field name="img">img`
+. . f . . . . f . . . . f . . . 
+. . f . . . f . . . . f . . . . 
+. . . f f f f f f f f f . . . . 
+f . . f c c c c c c c f . . . . 
+. f f c c c c c c c c c f f . . 
+. . f c c c f f f c c c f . f . 
+. . f c c c f 6 f c c c f . . . 
+f f f c c c 2 2 2 c c c f . f . 
+. . f c c c c e 2 c c c f f . . 
+. . f c e f f e f 2 c c f . . . 
+. f f c f e b e b f e c f . . . 
+f . . f c f e f b e f f f . . . 
+. . . . f f f f f f f . . f . . 
+. . . . . f . . . f . . . . f . 
+. . . . f . . . . f . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block></value><value name="kind"><shadow type="spritekind" id="eMoS.D$V+*K@a:9mOL(`"><field name="MEMBER">Enemy4</field></shadow></value></block></value><next><block type="spritesetpos" id="sYwXhi36R+?eF;D2`Vd:"><value name="sprite"><block type="variables_get" id="WZiv;i`c}gvO(#N^?t34"><field name="VAR" id="qS2~FED6lcdlj]tgM1,D">Drone</field></block></value><value name="x"><shadow type="positionPicker" id="fjPL-qT:6dp*pFWOk=]I"><field name="index">163</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random" id="3u@+Z,u@5wdDGQpqq+j$"><value name="min"><shadow type="math_number" id="lh54F1rXH*w0K)^ih7{p"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="%8PUTDES9?7cy1~xWs2Q"><field name="NUM">100</field></shadow></value></block></value><next><block type="spritesetvel" id="ArJZ$]_S(ZaZC^zCOET."><value name="sprite"><block type="variables_get" id="=78w.oJeADp?[$-:9ber"><field name="VAR" id="qS2~FED6lcdlj]tgM1,D">Drone</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="Q`hY8d{OE$8m;(c:;0fX"><field name="speed">-40</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow><block type="device_random" id="t[ni;QV73~dg8E59UOb3"><value name="min"><shadow type="math_number" id="UTnF,{0B?x1^6V3Zr4p@"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="af_F%K|`h-*UfCuX5gZq"><field name="NUM">10</field></shadow></value></block></value><next><block type="spriteFollowOtherSprite" id="$/OkCD8G4]nQ:JCI$DVv"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="?kWT4i3)4IAmr:T6,t+#"><field name="VAR" id="qS2~FED6lcdlj]tgM1,D">Drone</field></block></value><value name="target"><block type="variables_get" id="YIxhuXIf%5fP{P02?0p7"><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><value name="speed"><shadow type="math_number" id="]W.{S6jDn1vR!scN=;j?"><field name="NUM">35</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" id="2pAdiW3IE`_CY%XIJ6#8" x="1270" y="930"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id=":vsQddUkVGOedl4%*T{s"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="[K=,]%s;,oXqxVys|VYm"><field name="MEMBER">Enemy4</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id="mE}_eYA}(_S7Y%,H#p0B"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="(h+iY/Z}Q;rY[)TMi_T%"><field name="MEMBER">Projectile</field></shadow></value><statement name="HANDLER"><block type="spritedestroy" id="xK1o46.ZJ7Py([@8GBC{"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><field name="effect">effects.spray</field><value name="sprite"><block type="variables_get" id="eh^X_?HJH+-{P`nsa8VD"><field name="VAR" id="qS2~FED6lcdlj]tgM1,D">Drone</field></block></value><value name="duration"><shadow type="timePicker" id="q)FA^Cu|ky[tD4_#DW#3"><field name="ms">500</field></shadow></value></block></statement></block><block type="spritesoverlap" id="73YKUHnyJDz~+j9dy9#H" x="1270" y="1070"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="$[fy.VnrBX/R6/t#??bZ"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="=Soh_[`2JmHZ5JM-Qrnf"><field name="MEMBER">Enemy5</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id="RZ?$(KQSn{s!)Pi_SAfL"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="_CO-~#u|AHmBSpK7oo+i"><field name="MEMBER">Projectile</field></shadow></value><statement name="HANDLER"><block type="spritedestroy" id="f52!A6b#f*p7n=zA92@["><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><field name="effect">effects.spray</field><value name="sprite"><block type="variables_get" id="l)igkMlY4tjs(wv~Z/*C"><field name="VAR" id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</field></block></value><value name="duration"><shadow type="timePicker" id="N3`u0.MdU@qN*u8D=}XD"><field name="ms">500</field></shadow></value></block></statement></block><block type="gameinterval" id="HgYdt?3J_gRv0QA?saxF" x="610" y="1250"><value name="period"><shadow type="timePicker" id="64u`C*rr1imb(2[Pbk^*"><field name="ms">5000</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="Zz;4#%]oOQd3nX]{YTjQ"><field name="VAR" id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="Ux,]Q/~T@VS7n-/C=o_Q"><value name="img"><shadow type="screen_image_picker" id="*GiO,XeXwL#giD@U+I,("><field name="img">img`
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . f f f f f f . . . . . 
+. . . . . . . . . . . . . f c c c c c c f . . . . 
+. . . . . . . . . . . . . f c c c c c c f . . . . 
+. . . . . . . . . . . . . f c f f f f c f . . . . 
+. . . . . . . . . . . . . f c c c c c c f . . . . 
+. . . . . . . . . . . . . f c c c c c c f . . . . 
+. . . . . . . . . . . . . f c c c c c c f . . . . 
+. . . . . . . . . . . . . f f c c c c f f . . . . 
+. . . . . . . . . . . . . . f f f f f f . . . . . 
+. . . . . . . . . . . . . . . f c c f . . . . . . 
+. . . . . . . . . . . . f f f c c c c f f f . . . 
+. . . . . . . . . . . f c c c c c c c c c c f . . 
+. . . . . . . . . . f c c c c c c c c c c c c f . 
+. . . . . . . . . f f c c f c c c c c c f c c f f 
+. . . . . . . . . f c c f f c c c c c c f f c c f 
+. . . . . . . . . f c c f f c c c c c c f f c c f 
+. . . . . . . . f f c c f f c c c c c c f f c c f 
+. . . . . . . f b f 2 c 2 f c c c c c c f 2 c c 2 
+. . . . . . f b b f c 2 f f c c c c c c f f 2 c f 
+. . . . . f b b f 2 c c f f c c c c c c f f c 2 f 
+. . . . . f b f . f 2 2 f f c c c c c c f f 2 c f 
+. . . . . f b f . f f 2 f f c c c c c c f 2 f 2 f 
+. . . . . f b b f . . . . f c c c c c c f . . . . 
+. . . . . . f b f . . . . f c c f f c c f . . . . 
+. . . . . . . f b f . . . f c c f f c c f . . . . 
+. . . . . . . . f f . . . f c c f f c c f . . . . 
+. . . . . . . . . f . . . f c c f f c c f . . . . 
+. . . . . . . . . . . . . f c c f f c c f . . . . 
+. . . . . . . . . . . . . f c c f f c c f . . . . 
+. . . . . . . . . . . . . f c c f f c c f . . . . 
+. . . . . . . . . . . . . f f f f f f f f . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id=")ZOrM{,bqX0d=seHiFmn"><field name="MEMBER">Enemy5</field></shadow></value></block></value><next><block type="spritesetpos" id="r;FZQ.t@V1CRF:0#ul(r"><value name="sprite"><block type="variables_get" id="@t,K70qd{/Uj6zG~I4Dl"><field name="VAR" id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</field></block></value><value name="x"><shadow type="positionPicker" id="i(.|bUA?=Nv*0ll[c4~O"><field name="index">163</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random" id="R+%1yJD|$MC?,F=Y29]:"><value name="min"><shadow type="math_number" id="T7`R-CZqd3$@/)/{,(xc"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="@}[B570g40C21g2u]82B"><field name="NUM">100</field></shadow></value></block></value><next><block type="spritesetvel" id="rw4h:%6j:@?y!+gT,U%#"><value name="sprite"><block type="variables_get" id="ZK)eof`l6e3?!YrB~PK,"><field name="VAR" id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="TFkG!pF3LXEywo*5L;Cy"><field name="speed">-40</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow><block type="device_random" id="]|+3{Q1nsV0zjdAjlS5@"><value name="min"><shadow type="math_number" id="QqR=,Cg)/qNJ6O@7Xd!?"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="|IVu)b8ifJ4.MQge:4*i"><field name="NUM">10</field></shadow></value></block></value><next><block type="spriteFollowOtherSprite" id="h#6]mqmEMC$NH2Q0%v,w"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="6dbnuY!]fA(k,|+JR-B)"><field name="VAR" id="QvWT{jECXZ@{mZ5Rjm~|">Behemeth</field></block></value><value name="target"><block type="variables_get" id="{ctC6`bx-0:}S1YEdTL("><field name="VAR" id="|iMG%-Cg22WHw%m4v?B^">MC</field></block></value><value name="speed"><shadow type="math_number" id="Mjmr0`wH:kMrQi:_,(Mh"><field name="NUM">20</field></shadow></value></block></next></block></next></block></next></block></statement></block></xml>
